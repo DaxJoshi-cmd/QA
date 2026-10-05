@@ -131,6 +131,14 @@
         background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
       }
 
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-14px) rotate(2deg); }
+      }
+      .floating-shape-1 { animation: floatSlow 7s ease-in-out infinite; }
+      .floating-shape-2 { animation: floatSlow 9s ease-in-out infinite reverse; }
+      .floating-shape-3 { animation: floatSlow 8s ease-in-out infinite 1s; }
+
       pre[class*="language-"] {
         margin: 0.5rem 0 !important;
         border-radius: 0.75rem !important;
@@ -172,39 +180,32 @@
           <button onclick="document.getElementById('pricing-modal').classList.add('hidden')" class="text-obsidian-400 hover:text-white">✕</button>
         </header>
 
-        <!-- 3-TIER GRID -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch font-sans text-slate-900">
-          
-          <!-- TIER 1: STARTER (FREE) -->
+          <!-- TIER 1: STARTER (SCALED FOR 150 PLAYERS) -->
           <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200 flex flex-col justify-between">
             <div>
               <div class="bg-[#70B82C] text-white py-5 px-6 text-center" style="clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);">
-                <h3 class="text-2xl font-extrabold tracking-tight">Starter</h3>[cite: 1]
+                <h3 class="text-2xl font-extrabold tracking-tight">Starter</h3>
               </div>
-
               <div class="text-center pt-6 pb-4 px-6">
-                <div class="text-5xl font-black tracking-tight text-slate-800">Free</div>[cite: 1]
-                <div class="text-xs font-mono text-slate-500 mt-1">forever</div>[cite: 1]
+                <div class="text-5xl font-black tracking-tight text-slate-800">Free</div>
+                <div class="text-xs font-mono text-slate-500 mt-1">forever</div>
               </div>
-
-              <!-- Scaled to 100 Players -->
               <div class="flex justify-center mb-4">
                 <span class="px-4 py-1 rounded-full text-[11px] font-mono font-bold bg-slate-100 text-slate-700 border border-slate-200">
-                  Player limit: 100[cite: 2]
+                  Player limit: 150+ Concurrent
                 </span>
               </div>
-
               <ul class="text-xs font-semibold text-slate-600 divide-y divide-slate-100 px-6 text-center">
-                <li class="py-2.5">Create or Discover Sets</li>[cite: 1]
-                <li class="py-2.5">Standard Arcade Modes</li>
-                <li class="py-2.5">Question Set Search</li>[cite: 1]
-                <li class="py-2.5 font-bold text-slate-800">Up to 100 Players</li>
+                <li class="py-2.5">Create or Discover Sets</li>
+                <li class="py-2.5">Standard Arcade & Squad Modes</li>
+                <li class="py-2.5">Google Classroom Roster Sync</li>
+                <li class="py-2.5 font-bold text-slate-800">Up to 150 Concurrent Players</li>
               </ul>
             </div>
-
             <div class="p-6">
               <button onclick="document.getElementById('pricing-modal').classList.add('hidden')" class="w-full py-3.5 bg-[#70B82C] hover:bg-lime-600 text-white font-extrabold text-sm rounded-2xl arcade-key shadow-[0_4px_0_#4E851A] tracking-wider uppercase transition">
-                Already Owned[cite: 1]
+                Already Owned
               </button>
             </div>
           </div>
@@ -212,36 +213,30 @@
           <!-- TIER 2: PLUS (ANNUAL) -->
           <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border-2 border-[#F77B15] flex flex-col justify-between md:-translate-y-2 relative">
             <div class="absolute top-0 left-1/2 -translate-x-1/2 bg-[#C95E05] text-amber-200 text-[10px] font-mono font-extrabold px-4 py-1 rounded-b-xl uppercase tracking-widest z-10 shadow-sm">
-              Most Popular[cite: 2]
+              Most Popular
             </div>
-
             <div>
               <div class="bg-[#F77B15] text-white pt-8 pb-5 px-6 text-center" style="clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);">
-                <h3 class="text-3xl font-extrabold tracking-tight">Plus</h3>[cite: 1]
+                <h3 class="text-3xl font-extrabold tracking-tight">Plus</h3>
               </div>
-
               <div class="text-center pt-6 pb-4 px-6">
-                <div class="text-5xl font-black tracking-tight text-slate-900">$4.99</div>[cite: 1]
-                <div class="text-xs font-mono text-slate-500 mt-1">per month, charged yearly ($59.88)</div>[cite: 1]
+                <div class="text-5xl font-black tracking-tight text-slate-900">$4.99</div>
+                <div class="text-xs font-mono text-slate-500 mt-1">per month, charged yearly ($59.88)</div>
               </div>
-
-              <!-- Scaled to 500 Players -->
               <div class="flex justify-center mb-4">
                 <span class="px-4 py-1 rounded-full text-[11px] font-mono font-bold bg-amber-50 text-[#C95E05] border border-amber-200">
-                  Player limit: 500[cite: 2]
+                  Player limit: 500
                 </span>
               </div>
-
               <ul class="text-xs font-semibold text-slate-700 divide-y divide-slate-100 px-6 text-center">
-                <li class="py-2.5 text-[#F77B15] font-bold">All Starter Features</li>[cite: 1]
-                <li class="py-2.5">Exclusive Blooket Game Modes</li>[cite: 1]
-                <li class="py-2.5">Enhanced Game Reports & Telemetry</li>[cite: 1]
+                <li class="py-2.5 text-[#F77B15] font-bold">All Starter Features</li>
+                <li class="py-2.5">Tactical Consumable Power-Ups</li>
+                <li class="py-2.5">Enhanced Game Reports & Telemetry</li>
                 <li class="py-2.5">AI Lecture & PDF Parser</li>
                 <li class="py-2.5">Stockfish SOAR Anti-Cheat (0–5)</li>
                 <li class="py-2.5 font-bold text-slate-900">Up to 500 Players</li>
               </ul>
             </div>
-
             <div class="p-6">
               <button onclick="showComingSoon('Plus (Annual)')" class="w-full py-4 bg-[#F77B15] hover:bg-orange-600 text-white font-extrabold text-sm rounded-2xl arcade-key shadow-[0_4px_0_#BA5806] tracking-wider uppercase transition">
                 Coming Soon
@@ -253,37 +248,31 @@
           <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200 flex flex-col justify-between">
             <div>
               <div class="bg-[#EB5B28] text-white py-5 px-6 text-center" style="clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);">
-                <h3 class="text-2xl font-extrabold tracking-tight">Plus Flex</h3>[cite: 1]
+                <h3 class="text-2xl font-extrabold tracking-tight">Plus Flex</h3>
               </div>
-
               <div class="text-center pt-6 pb-4 px-6">
-                <div class="text-5xl font-black tracking-tight text-slate-800">$9.99</div>[cite: 1]
-                <div class="text-xs font-mono text-slate-500 mt-1">per month</div>[cite: 1]
+                <div class="text-5xl font-black tracking-tight text-slate-800">$9.99</div>
+                <div class="text-xs font-mono text-slate-500 mt-1">per month</div>
               </div>
-
-              <!-- Scaled to 1,000 Players -->
               <div class="flex justify-center mb-4">
                 <span class="px-4 py-1 rounded-full text-[11px] font-mono font-bold bg-orange-50 text-[#BA3C0D] border border-orange-200">
-                  Player limit: 1,000[cite: 2]
+                  Player limit: 1,000
                 </span>
               </div>
-
               <ul class="text-xs font-semibold text-slate-600 divide-y divide-slate-100 px-6 text-center">
-                <li class="py-2.5 text-[#EB5B28] font-bold">All Plus Features</li>[cite: 1]
-                <li class="py-2.5">Pay Monthly</li>[cite: 1]
-                <li class="py-2.5">Cancel Whenever</li>[cite: 1]
+                <li class="py-2.5 text-[#EB5B28] font-bold">All Plus Features</li>
+                <li class="py-2.5">Pay Monthly</li>
+                <li class="py-2.5">Cancel Whenever</li>
                 <li class="py-2.5 font-bold text-slate-800">Up to 1,000 Players</li>
                 <li class="py-2.5">Priority Support</li>
               </ul>
             </div>
-
             <div class="p-6">
               <button onclick="showComingSoon('Plus Flex (Monthly)')" class="w-full py-3.5 bg-[#EB5B28] hover:bg-rose-600 text-white font-extrabold text-sm rounded-2xl arcade-key shadow-[0_4px_0_#AC380E] tracking-wider uppercase transition">
                 Coming Soon
               </button>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -298,8 +287,12 @@
       </div>
     </div>
 
-    <!-- HOME SCREEN -->
+    <!-- ==================== HOME SCREEN ==================== -->
     <main id="home-screen" class="relative min-h-screen flex flex-col justify-between overflow-hidden bg-[#030406]">
+      <div class="absolute top-1/4 left-8 w-72 h-72 bg-gradient-to-tr from-pink-600 to-purple-600 rounded-[40%] blur-[100px] opacity-40 pointer-events-none floating-shape-1"></div>
+      <div class="absolute top-1/3 right-12 w-80 h-80 bg-gradient-to-tr from-amber-500 to-rose-600 rounded-[45%] blur-[110px] opacity-35 pointer-events-none floating-shape-2"></div>
+      <div class="absolute bottom-10 left-1/3 w-96 h-96 bg-gradient-to-tr from-blue-600 to-emerald-500 rounded-[50%] blur-[120px] opacity-30 pointer-events-none floating-shape-3"></div>
+
       <header class="relative z-20 flex items-center justify-between px-6 sm:px-12 py-6 max-w-7xl mx-auto w-full">
         <div class="flex items-center gap-3">
           <div class="flex items-center justify-center w-10 h-10 border rounded-2xl bg-obsidian-850 border-white/10 text-white font-mono font-bold text-base shadow-lg">UQ</div>
@@ -316,32 +309,30 @@
 
         <div class="flex items-center gap-3">
           <button onclick="openAuthModal()" class="px-5 py-2.5 text-xs font-semibold text-white hover:text-slate-200 transition">Log In</button>
-          <button onclick="openAuthModal()" class="px-5 py-2.5 bg-white hover:bg-slate-100 text-obsidian-950 font-bold text-xs uppercase tracking-wider rounded-full transition arcade-key shadow-[0_3px_0_#94A3B8]">Get Started (Free)</button>
+          <button onclick="openAuthModal()" class="px-5 py-2.5 bg-white hover:bg-slate-100 text-obsidian-950 font-bold text-xs uppercase tracking-wider rounded-full transition arcade-key shadow-[0_3px_0_#94A3B8]">Get Started</button>
         </div>
       </header>
 
-      <!-- Center Hero Section -->
       <section class="relative z-20 flex-1 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto my-auto">
         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-obsidian-900/80 border border-white/10 text-[11px] font-mono text-arcade-gold mb-6 backdrop-blur-xl shadow-inner cursor-pointer" onclick="openPricingModal()">
-          <span>🪙 Affordable Institutional Plans — View Tiers →</span>
+          <span>🪙 Scaled for 125+ Students • Live Google Workspace Ready →</span>
         </div>
 
         <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-4 leading-tight">
           Make learning addictive
         </h1>
         <p class="text-sm sm:text-base text-obsidian-300 max-w-xl mb-10 font-normal">
-          Combine high-speed Kahoot broadcast energy with Blooket gold chest unboxing, loot economies, and Stockfish anti-cheat security.
+          Combine high-speed broadcast energy with Blooket gold chest unboxing, live option STEM rendering, and Stockfish anti-cheat security.
         </p>
 
-        <div class="flex gap-4">
+        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           <button onclick="openAuthModal()" class="px-8 py-4 bg-white text-obsidian-950 font-bold text-xs uppercase tracking-widest rounded-2xl arcade-key shadow-[0_4px_0_#94A3B8] transition">Start Free Session</button>
           <button onclick="toggleStudentJoin()" class="px-8 py-4 glass-card hover:border-white/30 text-white font-bold text-xs uppercase tracking-widest rounded-2xl transition shadow-xl">Join Live Session</button>
         </div>
       </section>
 
-      <!-- Bottom Footer Info -->
       <footer class="relative z-20 px-6 sm:px-12 py-6 max-w-7xl mx-auto w-full flex justify-between items-center text-xs font-mono text-obsidian-400 border-t border-white/5">
-        <div>UniQuiz Platform OS v5.6</div>
+        <div>UniQuiz Platform OS v6.1 — High-Concurrency Cluster (125+ Ready)</div>
         <div class="flex gap-4">
           <a href="#" onclick="showComingSoon('Privacy Policy')" class="hover:text-white transition">Privacy</a>
           <a href="#" onclick="showComingSoon('Terms of Service')" class="hover:text-white transition">Terms</a>
@@ -350,16 +341,33 @@
       </footer>
     </main>
 
-    <!-- AUTHENTICATION DIALOG (FREE ENTRY) -->
+    <!-- AUTHENTICATION DIALOG (GOOGLE CLASSROOM SSO) -->
     <main id="auth-screen" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-obsidian-950/90 backdrop-blur-xl">
       <div class="w-full max-w-md p-8 sm:p-10 rounded-3xl glass-modal relative z-10">
-        <header class="flex items-center gap-3.5 mb-8">
+        <header class="flex items-center gap-3.5 mb-6">
           <div class="flex items-center justify-center w-11 h-11 border rounded-2xl bg-obsidian-850 border-white/10 text-white font-mono font-bold text-lg shadow-inner">UQ</div>
           <div>
             <h1 class="text-xl font-bold tracking-tight text-white leading-tight">UniQuiz Gateway</h1>
-            <p class="text-[11px] font-mono uppercase tracking-widest text-emerald-400">Standard Tier Active</p>
+            <p class="text-[11px] font-mono uppercase tracking-widest text-emerald-400">Classroom Authentication</p>
           </div>
         </header>
+
+        <!-- GOOGLE SINGLE SIGN-ON (FIREBASE POPUP) -->
+        <button onclick="loginWithGoogleClassroom()" class="w-full py-3.5 mb-4 bg-white hover:bg-slate-100 text-obsidian-950 font-bold text-xs uppercase tracking-wider rounded-2xl transition flex items-center justify-center gap-3 shadow-md arcade-key">
+          <svg class="w-4 h-4" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          <span>Continue with Google</span>
+        </button>
+
+        <div class="flex items-center my-4">
+          <div class="flex-1 border-t border-white/10"></div>
+          <span class="px-3 text-[10px] font-mono uppercase text-obsidian-400">or operator credential</span>
+          <div class="flex-1 border-t border-white/10"></div>
+        </div>
 
         <form onsubmit="event.preventDefault(); attemptLogin();" class="space-y-4">
           <div>
@@ -370,7 +378,7 @@
             <label class="block text-[11px] font-mono uppercase tracking-wider text-obsidian-400 mb-1.5 font-semibold">Security Token</label>
             <input type="password" id="login-pass" autocomplete="current-password" class="w-full px-4 py-3.5 bg-obsidian-850 border border-white/10 rounded-2xl text-sm font-medium text-white focus:outline-none focus:border-arcade-blue transition" placeholder="••••••••••••">
           </div>
-          <button type="submit" class="w-full py-4 mt-2 bg-white hover:bg-slate-100 text-obsidian-950 font-bold text-xs uppercase tracking-widest rounded-2xl transition arcade-key shadow-[0_4px_0_#94A3B8]">AUTHENTICATE OPERATOR</button>
+          <button type="submit" class="w-full py-4 mt-2 bg-obsidian-800 hover:bg-obsidian-750 text-white font-bold text-xs uppercase tracking-widest rounded-2xl transition border border-white/10">AUTHENTICATE OPERATOR</button>
         </form>
 
         <footer class="mt-6 pt-6 border-t border-white/10 flex gap-3">
@@ -379,6 +387,37 @@
         </footer>
       </div>
     </main>
+
+    <!-- STUDENT DASHBOARD & ENROLLED COURSES PORTAL -->
+    <div id="student-portal-layout" class="hidden min-h-screen bg-[#030406] flex flex-col justify-between p-6 sm:p-12">
+      <header class="flex justify-between items-center max-w-4xl mx-auto w-full pb-6 border-b border-white/10">
+        <div>
+          <span class="text-[10px] font-mono uppercase tracking-wider text-arcade-green font-bold">Student Terminal</span>
+          <h2 class="text-2xl font-bold text-white tracking-tight" id="student-portal-name">Student Account</h2>
+        </div>
+        <button onclick="logout()" class="px-4 py-2 bg-obsidian-850 hover:bg-obsidian-800 text-obsidian-300 font-mono text-xs rounded-xl border border-white/10">
+          Disconnect
+        </button>
+      </header>
+
+      <main class="flex-1 max-w-4xl mx-auto w-full py-8 space-y-6">
+        <div class="flex items-center justify-between">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-obsidian-400 font-mono">Your Enrolled Classrooms</h3>
+          <button onclick="toggleStudentJoin()" class="px-5 py-2.5 bg-white text-obsidian-950 font-bold text-xs uppercase tracking-wider rounded-xl arcade-key">
+            Enter Room PIN
+          </button>
+        </div>
+        <div id="student-enrolled-courses" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-6 rounded-2xl glass-card text-center text-obsidian-400 font-mono text-xs">
+            Querying Google Classroom enrollments...
+          </div>
+        </div>
+      </main>
+
+      <footer class="text-center font-mono text-[11px] text-obsidian-500 py-4">
+        Connected via Google Workspace OAuth
+      </footer>
+    </div>
 
     <!-- PARTICIPANT ACCESS MODAL -->
     <div id="student-join-screen" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4 bg-obsidian-950/95 backdrop-blur-xl">
@@ -389,10 +428,11 @@
             <h2 class="text-2xl font-bold text-white tracking-tight">Connect Client</h2>
           </div>
           <div class="space-y-4 mb-6">
-            <input type="text" id="player-name-input" placeholder="Callsign / Full Name" class="w-full px-4 py-3.5 bg-obsidian-850 border border-white/10 rounded-2xl text-sm font-medium text-white focus:outline-none focus:border-white">
+            <input type="text" id="player-name-input" placeholder="Callsign / Student Name" class="w-full px-4 py-3.5 bg-obsidian-850 border border-white/10 rounded-2xl text-sm font-medium text-white focus:outline-none focus:border-white">
+            <input type="text" id="player-roll-input" placeholder="Student Roll No (e.g. CS-2026-04)" class="w-full px-4 py-3 bg-obsidian-850 border border-white/10 rounded-2xl text-xs font-mono text-white focus:outline-none focus:border-white">
             <input type="text" id="game-pin-input" placeholder="ROOM PIN" maxlength="6" class="w-full py-4 text-center text-4xl font-mono font-bold tracking-[0.2em] bg-obsidian-850 border-2 border-white/15 rounded-2xl text-white uppercase focus:outline-none focus:border-white">
             
-            <div id="team-select-group" class="hidden">
+            <div id="team-select-group">
               <label class="block text-[10px] font-mono uppercase text-obsidian-400 mb-1 font-semibold">Assigned Cohort Squadron</label>
               <select id="player-team-input" class="w-full px-4 py-3 bg-obsidian-850 border border-white/10 rounded-2xl text-xs font-mono text-white focus:outline-none focus:border-white">
                 <option value="Alpha Matrix">🔺 Alpha Matrix</option>
@@ -434,7 +474,7 @@
     <div id="player-waiting-screen" class="hidden fixed inset-0 z-[65] flex flex-col items-center justify-center p-6 bg-obsidian-950 text-center">
       <div class="w-24 h-24 rounded-3xl bg-obsidian-900 border border-white/10 flex items-center justify-center text-4xl mb-6 shadow-2xl font-mono text-white" id="waiting-avatar-display">▲</div>
       <h2 class="text-3xl font-bold tracking-tight text-white mb-2">Connected to Broadcast</h2>
-      <p class="text-sm text-obsidian-400 max-w-sm mb-6">Instructor console is currently in lobby phase. STEM questions will render on your display automatically.</p>
+      <p class="text-sm text-obsidian-400 max-w-sm mb-6">Instructor console is currently in lobby phase. Questions and choices will render on your display automatically.</p>
       <div class="px-4 py-1.5 rounded-full bg-obsidian-900 border border-white/10 font-mono text-xs text-obsidian-400" id="player-wait-pin">ROOM: ------</div>
     </div>
 
@@ -456,16 +496,19 @@
             <button onclick="nav('library')" id="nav-library" class="sidebar-item w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-xs font-bold transition bg-obsidian-800 text-white shadow-sm">
               <span class="font-mono text-obsidian-400">01</span> Question Banks
             </button>
+            <button onclick="nav('roster')" id="nav-roster" class="sidebar-item w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-xs font-bold transition text-obsidian-400 hover:text-white">
+              <span class="font-mono text-obsidian-400">02</span> Roster & Classroom
+            </button>
             <button onclick="nav('reports')" id="nav-reports" class="sidebar-item w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-xs font-bold transition text-obsidian-400 hover:text-white">
-              <span class="font-mono text-obsidian-400">02</span> Gradebook Telemetry
+              <span class="font-mono text-obsidian-400">03</span> Gradebook Telemetry
             </button>
             <button onclick="nav('settings')" id="nav-settings" class="sidebar-item w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-xs font-bold transition text-obsidian-400 hover:text-white">
-              <span class="font-mono text-obsidian-400">03</span> LTI & Webhooks
+              <span class="font-mono text-obsidian-400">04</span> LTI & Webhooks
             </button>
             <div id="admin-menu" class="pt-4 mt-4 border-t border-white/5">
               <span class="px-3 text-[10px] font-mono uppercase tracking-widest text-obsidian-400 font-semibold">Administration</span>
               <button onclick="nav('users')" id="nav-users" class="sidebar-item w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-xs font-bold transition text-obsidian-400 hover:text-white mt-1">
-                <span class="font-mono text-obsidian-400">04</span> University Accounts
+                <span class="font-mono text-obsidian-400">05</span> University Accounts
               </button>
             </div>
           </nav>
@@ -487,12 +530,85 @@
           <div id="quiz-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         </div>
 
+        <!-- ROSTER & GOOGLE CLASSROOM TAB -->
+        <div id="view-roster" class="hidden transition-all duration-300 space-y-6">
+          <div class="pb-6 border-b border-white/5">
+            <h2 class="text-2xl font-bold tracking-tight text-white">Roster & Attendance Ingestion</h2>
+            <p class="text-xs text-obsidian-400">Sync directly with Google Classroom, upload CSV attendance sheets, or register students manually.</p>
+          </div>
+
+          <!-- Google Classroom Integration Box -->
+          <div class="p-6 rounded-3xl glass-card space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                  <span>🎓 Google Classroom Sync</span>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-blue-500/20 text-blue-300">Live API</span>
+                </h3>
+                <p class="text-xs text-obsidian-400 mt-0.5">Select a class you instruct to pull the verified student roster directly.</p>
+              </div>
+              <button onclick="syncSelectedClassroomRoster()" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition arcade-key">
+                Sync Students
+              </button>
+            </div>
+            <div class="flex gap-3">
+              <select id="classroom-course-select" class="flex-1 px-4 py-3 bg-obsidian-850 border border-white/10 rounded-2xl text-xs text-white font-mono focus:outline-none">
+                <option value="">No Google Classroom courses loaded (Sign in with Google)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- CSV Attendance Sheet Upload Box -->
+          <div class="p-6 rounded-3xl glass-card space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                  <span>📄 CSV / Excel Attendance Import</span>
+                </h3>
+                <p class="text-xs text-obsidian-400 mt-0.5">Upload class roster sheets (.csv with Name, Roll Number, Email columns).</p>
+              </div>
+              <button onclick="document.getElementById('csv-file-input').click()" class="px-5 py-2.5 bg-arcade-amber hover:bg-amber-400 text-obsidian-950 font-bold text-xs uppercase tracking-wider rounded-xl transition arcade-key">
+                Upload CSV File
+              </button>
+              <input type="file" id="csv-file-input" accept=".csv" class="hidden" onchange="handleRosterCSV(event)">
+            </div>
+          </div>
+
+          <!-- Manual Student Addition Box -->
+          <div class="p-6 rounded-3xl glass-card space-y-4">
+            <h3 class="text-sm font-bold text-white uppercase font-mono text-xs">Manual Student Registration</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <input type="text" id="manual-student-name" placeholder="Student Full Name" class="px-4 py-3 bg-obsidian-850 border border-white/10 rounded-2xl text-xs text-white">
+              <input type="text" id="manual-student-roll" placeholder="Roll Number / ID" class="px-4 py-3 bg-obsidian-850 border border-white/10 rounded-2xl text-xs text-white font-mono">
+              <input type="email" id="manual-student-email" placeholder="Student Email (Optional)" class="px-4 py-3 bg-obsidian-850 border border-white/10 rounded-2xl text-xs text-white">
+            </div>
+            <button onclick="addStudentManually()" class="px-6 py-3 bg-white text-obsidian-950 font-bold text-xs uppercase tracking-wider rounded-2xl arcade-key">
+              + Enroll Student
+            </button>
+          </div>
+
+          <!-- Current Course Roster Display -->
+          <div class="rounded-3xl glass-card overflow-hidden">
+            <div class="p-4 border-b border-white/5 flex justify-between items-center">
+              <span class="text-xs font-mono uppercase text-obsidian-400 font-bold" id="roster-count-label">0 Students Enrolled</span>
+            </div>
+            <table class="w-full text-left text-xs">
+              <thead class="bg-obsidian-850 border-b border-white/5 text-obsidian-400 font-mono uppercase">
+                <tr><th class="p-4">Roll No</th><th class="p-4">Student Name</th><th class="p-4">Email</th><th class="p-4">Source</th></tr>
+              </thead>
+              <tbody id="roster-table-body" class="divide-y divide-white/5 text-obsidian-300">
+                <tr><td colspan="4" class="p-4 text-center text-obsidian-400 font-mono">No students enrolled yet.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         <!-- REPORTS TAB -->
         <div id="view-reports" class="hidden transition-all duration-300">
           <div class="flex items-center justify-between pb-6 mb-8 border-b border-white/5">
             <div>
               <h2 class="text-2xl font-bold tracking-tight text-white">Institutional Session Reports</h2>
-              <p class="text-xs text-obsidian-400">Participant records, gold tallies, and question difficulty audits</p>
+              <p class="text-xs text-obsidian-400">Participant records, points breakdown, and diagnostic logs</p>
             </div>
             <button onclick="exportAllReportsCSV()" class="px-5 py-3 bg-arcade-green hover:bg-emerald-500 text-obsidian-950 text-xs font-bold uppercase tracking-wider rounded-2xl transition arcade-key shadow-[0_3px_0_#009E5C]">Download All Telemetry (CSV)</button>
           </div>
@@ -605,7 +721,7 @@
       </main>
     </div>
 
-    <!-- HOST ROOM DISPLAY -->
+    <!-- HOST ROOM DISPLAY (WITH DOCUMENT-FRAGMENT OPTIMIZATION FOR 125+ PLAYERS) -->
     <div id="host-lobby-screen" class="hidden fixed inset-0 z-[70] bg-obsidian-950 flex flex-col justify-between p-8 lg:p-14">
       <header class="flex items-start justify-between">
         <div>
@@ -625,7 +741,7 @@
       </header>
 
       <section class="flex-1 overflow-y-auto py-12">
-        <div id="lobby-player-grid" class="flex flex-wrap gap-3.5 justify-center max-w-5xl mx-auto"></div>
+        <div id="lobby-player-grid" class="flex flex-wrap gap-2.5 justify-center max-w-6xl mx-auto"></div>
       </section>
 
       <footer class="flex items-center justify-between pt-6 border-t border-white/5">
@@ -670,6 +786,32 @@
       <main class="flex-1 flex flex-col items-center justify-center max-w-4xl mx-auto w-full text-center py-4">
         <img id="host-question-image" src="" alt="" class="hidden max-h-52 rounded-2xl mb-4 border border-white/10 object-contain shadow-2xl">
         <div class="text-2xl lg:text-4xl font-bold tracking-tight text-white mb-6 leading-relaxed max-w-3xl" id="host-question-text">Loading Question...</div>
+
+        <!-- Squad Standing Bar -->
+        <div id="host-squad-scoreboard" class="w-full max-w-xl mb-4 p-4 rounded-3xl glass-card font-mono text-xs">
+          <div class="flex justify-between items-center text-[10px] text-obsidian-400 mb-2 uppercase tracking-wider">
+            <span>⚔️ Cohort Squad Standing</span>
+            <span id="leading-squad-badge" class="font-bold text-arcade-gold">Active Session</span>
+          </div>
+          <div class="grid grid-cols-4 gap-2 text-center text-[11px]">
+            <div class="p-2 rounded-xl bg-obsidian-850 border border-white/5">
+              <div class="text-rose-400 font-bold truncate">🔺 Alpha</div>
+              <div class="text-white font-mono" id="score-team-alpha">0 pts</div>
+            </div>
+            <div class="p-2 rounded-xl bg-obsidian-850 border border-white/5">
+              <div class="text-blue-400 font-bold truncate">🔷 Cyber</div>
+              <div class="text-white font-mono" id="score-team-cyber">0 pts</div>
+            </div>
+            <div class="p-2 rounded-xl bg-obsidian-850 border border-white/5">
+              <div class="text-emerald-400 font-bold truncate">🟢 Sigma</div>
+              <div class="text-white font-mono" id="score-team-sigma">0 pts</div>
+            </div>
+            <div class="p-2 rounded-xl bg-obsidian-850 border border-white/5">
+              <div class="text-amber-400 font-bold truncate">🟡 Guild</div>
+              <div class="text-white font-mono" id="score-team-guild">0 pts</div>
+            </div>
+          </div>
+        </div>
 
         <div id="host-pacing-histogram" class="w-full max-w-xl mb-6 p-5 rounded-3xl glass-card font-mono">
           <div class="flex justify-between items-center text-[10px] text-obsidian-400 mb-2 uppercase tracking-wider">
@@ -720,29 +862,29 @@
     <!-- HOST CHAMPIONSHIP PODIUM -->
     <div id="host-podium-screen" class="hidden fixed inset-0 z-[100] bg-obsidian-950 flex flex-col items-center justify-end pb-24">
       <div class="absolute top-16 text-center">
-        <span class="text-[11px] font-mono uppercase tracking-[0.2em] text-arcade-gold font-bold">Blooket Gold Rush Leaderboard</span>
-        <h1 class="text-3xl font-bold tracking-tight text-white mt-1">Championship Gold Masters</h1>
+        <span class="text-[11px] font-mono uppercase tracking-[0.2em] text-arcade-gold font-bold">Championship Leaderboard</span>
+        <h1 class="text-3xl font-bold tracking-tight text-white mt-1">Podium Masters</h1>
       </div>
 
       <div class="flex items-end justify-center gap-6 h-96 w-full max-w-2xl px-4">
         <div class="flex flex-col items-center w-36">
           <div class="text-4xl mb-2" id="podium-av-2">🥈</div>
           <div class="font-bold text-sm text-white truncate max-w-full mb-0.5" id="podium-name-2">---</div>
-          <div class="font-mono text-xs text-arcade-gold mb-3 flex items-center gap-1 font-bold">🪙 <span id="podium-score-2">0</span></div>
+          <div class="font-mono text-xs text-white mb-3 flex items-center gap-1 font-bold">🎯 <span id="podium-score-2">0</span> pts</div>
           <div class="podium-rise w-full bg-obsidian-850 border border-white/10 rounded-t-2xl flex items-start justify-center pt-4 font-mono font-bold text-2xl text-obsidian-400" style="height: 0%" id="block-2">2</div>
         </div>
 
         <div class="flex flex-col items-center w-48">
           <div class="text-5xl mb-2" id="podium-av-1">👑</div>
           <div class="font-bold text-base text-white truncate max-w-full mb-0.5" id="podium-name-1">---</div>
-          <div class="font-mono text-sm text-arcade-gold font-bold mb-3 flex items-center gap-1">🪙 <span id="podium-score-1">0</span></div>
+          <div class="font-mono text-sm text-arcade-gold font-bold mb-3 flex items-center gap-1">🎯 <span id="podium-score-1">0</span> pts</div>
           <div class="podium-rise w-full bg-obsidian-800 border border-amber-500/40 rounded-t-2xl flex items-start justify-center pt-4 font-mono font-bold text-4xl text-amber-300 shadow-[0_0_50px_rgba(255,176,32,0.2)]" style="height: 0%" id="block-1">1</div>
         </div>
 
         <div class="flex flex-col items-center w-36">
           <div class="text-4xl mb-2" id="podium-av-3">🥉</div>
           <div class="font-bold text-sm text-white truncate max-w-full mb-0.5" id="podium-name-3">---</div>
-          <div class="font-mono text-xs text-arcade-gold mb-3 flex items-center gap-1 font-bold">🪙 <span id="podium-score-3">0</span></div>
+          <div class="font-mono text-xs text-white mb-3 flex items-center gap-1 font-bold">🎯 <span id="podium-score-3">0</span> pts</div>
           <div class="podium-rise w-full bg-obsidian-850 border border-white/10 rounded-t-2xl flex items-start justify-center pt-4 font-mono font-bold text-2xl text-obsidian-400" style="height: 0%" id="block-3">3</div>
         </div>
       </div>
@@ -750,45 +892,56 @@
       <button onclick="window.location.reload()" class="absolute top-8 left-8 text-xs font-mono text-obsidian-400 hover:text-white">← Terminate Session</button>
     </div>
 
-    <!-- STUDENT ACTIVE CONTROLLER VIEW -->
+    <!-- STUDENT ACTIVE CONTROLLER VIEW (PROMPT + REAL ANSWER TEXT IN BUTTONS) -->
     <div id="game-screen" class="hidden fixed inset-0 z-[80] bg-obsidian-950 flex flex-col justify-between p-4 sm:p-6">
       <header class="flex justify-between items-center py-3.5 px-6 rounded-2xl glass-card font-mono text-xs shadow-lg">
         <div class="flex items-center gap-4">
-          <div>POINTS: <span id="player-score" class="text-white font-bold">0</span></div>
+          <div>POINTS: <span id="player-score" class="text-white font-bold text-sm">0</span></div>
           <div class="text-arcade-gold font-bold flex items-center gap-1">
             GOLD: 🪙 <span id="player-gold">0</span>
           </div>
         </div>
-        <div id="streak-hud-badge" class="text-arcade-amber font-bold flex items-center gap-1">
-          STREAK: <span id="player-streak">0</span> 🔥
+        <div class="flex items-center gap-3">
+          <div id="active-multiplier-badge" class="hidden px-2.5 py-1 rounded-xl bg-amber-500/20 text-arcade-gold border border-amber-500/40 font-bold flex items-center gap-1 text-[10px]">
+            <span>⚡ 2X MULTIPLIER READY</span>
+          </div>
+          <div id="streak-hud-badge" class="text-arcade-amber font-bold flex items-center gap-1">
+            STREAK: <span id="player-streak">0</span> 🔥
+          </div>
         </div>
       </header>
+
+      <!-- Student Prompt Container -->
+      <div id="student-prompt-container" class="my-auto max-w-3xl mx-auto w-full text-center px-4">
+        <div id="student-live-prompt" class="text-lg sm:text-2xl font-bold text-white leading-relaxed"></div>
+      </div>
 
       <div id="wait-message-start" class="flex-1 flex flex-col items-center justify-center text-center">
         <h3 class="text-2xl font-bold text-white mb-1.5">Attention on Instructor Display</h3>
         <p class="text-xs text-obsidian-400 font-mono uppercase tracking-wider">Input controls will arm automatically</p>
       </div>
 
-      <div id="answer-buttons-container" class="hidden grid grid-cols-2 gap-4 h-[55vh] max-w-3xl mx-auto w-full">
-        <button id="btn-0" onclick="submitAnswer(0)" class="arcade-key bg-arcade-red hover:bg-rose-600 text-white rounded-3xl flex flex-col items-center justify-center p-6 shadow-[0_8px_0_#C71B3A]">
-          <span class="text-4xl mb-1">▲</span>
-          <span class="text-[10px] font-mono tracking-widest uppercase opacity-80" id="btn-0-text">Option 1</span>
+      <!-- Live Answer Buttons Populated with Real Option Content -->
+      <div id="answer-buttons-container" class="hidden grid grid-cols-2 gap-4 h-[55vh] max-w-4xl mx-auto w-full">
+        <button id="btn-0" onclick="submitAnswer(0)" class="arcade-key bg-arcade-red hover:bg-rose-600 text-white rounded-3xl flex flex-col items-center justify-center p-6 shadow-[0_8px_0_#C71B3A] text-center">
+          <span class="text-3xl sm:text-4xl mb-2">▲</span>
+          <div class="text-xs sm:text-sm font-semibold tracking-wide text-white" id="btn-0-text">Option 1</div>
         </button>
-        <button id="btn-1" onclick="submitAnswer(1)" class="arcade-key bg-arcade-blue hover:bg-blue-600 text-white rounded-3xl flex flex-col items-center justify-center p-6 shadow-[0_8px_0_#0D4EC7]">
-          <span class="text-4xl mb-1">◆</span>
-          <span class="text-[10px] font-mono tracking-widest uppercase opacity-80" id="btn-1-text">Option 2</span>
+        <button id="btn-1" onclick="submitAnswer(1)" class="arcade-key bg-arcade-blue hover:bg-blue-600 text-white rounded-3xl flex flex-col items-center justify-center p-6 shadow-[0_8px_0_#0D4EC7] text-center">
+          <span class="text-3xl sm:text-4xl mb-2">◆</span>
+          <div class="text-xs sm:text-sm font-semibold tracking-wide text-white" id="btn-1-text">Option 2</div>
         </button>
-        <button id="btn-2" onclick="submitAnswer(2)" class="arcade-key bg-arcade-amber hover:bg-amber-500 text-white rounded-3xl flex flex-col items-center justify-center p-6 shadow-[0_8px_0_#C98200]">
-          <span class="text-4xl mb-1">●</span>
-          <span class="text-[10px] font-mono tracking-widest uppercase opacity-80" id="btn-2-text">Option 3</span>
+        <button id="btn-2" onclick="submitAnswer(2)" class="arcade-key bg-arcade-amber hover:bg-amber-500 text-white rounded-3xl flex flex-col items-center justify-center p-6 shadow-[0_8px_0_#C98200] text-center">
+          <span class="text-3xl sm:text-4xl mb-2">●</span>
+          <div class="text-xs sm:text-sm font-semibold tracking-wide text-white" id="btn-2-text">Option 3</div>
         </button>
-        <button id="btn-3" onclick="submitAnswer(3)" class="arcade-key bg-arcade-green hover:bg-emerald-500 text-white rounded-3xl flex flex-col items-center justify-center p-6 shadow-[0_8px_0_#009E5C]">
-          <span class="text-4xl mb-1">■</span>
-          <span class="text-[10px] font-mono tracking-widest uppercase opacity-80" id="btn-3-text">Option 4</span>
+        <button id="btn-3" onclick="submitAnswer(3)" class="arcade-key bg-arcade-green hover:bg-emerald-500 text-white rounded-3xl flex flex-col items-center justify-center p-6 shadow-[0_8px_0_#009E5C] text-center">
+          <span class="text-3xl sm:text-4xl mb-2">■</span>
+          <div class="text-xs sm:text-sm font-semibold tracking-wide text-white" id="btn-3-text">Option 4</div>
         </button>
       </div>
 
-      <!-- Blooket Mystery Chest Unboxing Screen -->
+      <!-- Blooket Mystery Chest Screen -->
       <div id="chest-selection-screen" class="hidden flex-1 flex flex-col items-center justify-center text-center p-6">
         <h3 class="text-3xl font-extrabold text-white mb-2 tracking-tight">Correct! Choose A Mystery Chest</h3>
         <p class="text-xs font-mono text-arcade-gold mb-8">Unbox gold multipliers, bonuses, or sabotage rivals!</p>
@@ -818,24 +971,25 @@
       <div id="result-message" class="hidden flex-1 flex flex-col items-center justify-center text-center p-8 rounded-3xl glass-card shadow-2xl">
         <h3 class="text-5xl font-bold mb-3 font-mono tracking-tight" id="result-title">Verified</h3>
         <div class="font-mono text-xs px-5 py-2.5 rounded-full bg-obsidian-900 border border-white/10 text-obsidian-300 mb-2">
-          + <span id="result-points" class="text-white font-bold">0</span> POINTS • 🪙 <span id="result-chest-reward" class="text-arcade-gold font-bold">+0 Gold</span>
+          + <span id="result-points" class="text-white font-bold text-sm">0</span> POINTS • 🪙 <span id="result-chest-reward" class="text-arcade-gold font-bold">+0 Gold</span>
         </div>
         <div class="text-[11px] font-mono text-obsidian-400" id="result-breakdown">
           Speed Factor: 0 pts • Streak Multiplier: +0
         </div>
       </div>
 
-      <div class="text-center font-mono text-[10px] text-obsidian-400">Blooket Gold Rush Active • Speed and Accuracy reward Loot Chests</div>
+      <div class="text-center font-mono text-[10px] text-obsidian-400">Dynamic Score Engine • High response speeds grant up to 1000 base points</div>
     </div>
 
     <!-- STUDENT CONCLUSION DISPLAY -->
     <div id="student-final-screen" class="hidden fixed inset-0 z-[100] bg-obsidian-950 flex flex-col items-center justify-center p-6 text-center">
-      <div class="text-6xl mb-4">🪙</div>
+      <div class="text-6xl mb-4">🏆</div>
       <h2 class="text-3xl font-bold tracking-tight text-white mb-1">Match Concluded</h2>
-      <p class="text-xs font-mono text-obsidian-400 uppercase tracking-widest mb-6">Final Gold Tally</p>
-      <div class="text-7xl font-mono font-bold text-arcade-gold mb-8 flex items-center justify-center gap-2">
-        🪙 <span id="final-gold-display">0</span>
+      <p class="text-xs font-mono text-obsidian-400 uppercase tracking-widest mb-6">Final Grand Score</p>
+      <div class="text-7xl font-mono font-bold text-white mb-8 flex items-center justify-center gap-2">
+        <span id="final-score-display">0</span> <span class="text-2xl text-obsidian-400 font-normal">pts</span>
       </div>
+      <div class="text-xs font-mono text-arcade-gold mb-8">Total Gold: 🪙 <span id="final-gold-display">0</span></div>
       <button onclick="window.location.reload()" class="px-8 py-3.5 bg-white text-obsidian-950 font-bold text-xs uppercase tracking-wider rounded-2xl arcade-key shadow-[0_3px_0_#94A3B8]">RETURN TO LOBBY</button>
     </div>
 
@@ -852,7 +1006,6 @@
 
         <input type="text" id="new-set-title" placeholder="Module Title (e.g. Distributed Networks 401)" class="w-full px-4 py-3.5 bg-obsidian-850 border border-white/10 rounded-2xl text-sm font-medium text-white mb-4">
 
-        <!-- AI Instant Quiz Generator Helper -->
         <div class="p-5 rounded-2xl border border-arcade-gold/40 bg-amber-950/20 mb-5 space-y-3">
           <div class="flex items-center justify-between">
             <span class="text-xs font-mono font-bold text-arcade-gold uppercase tracking-wider">✨ AI Lecture Note / PDF Parser</span>
@@ -1010,11 +1163,31 @@
     <!-- ENGINE JAVASCRIPT LOGIC -->
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-      import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+      import { 
+        getAuth, 
+        signInAnonymously, 
+        signInWithPopup, 
+        GoogleAuthProvider, 
+        onAuthStateChanged 
+      } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
       import { 
         getFirestore, collection, doc, addDoc, deleteDoc, setDoc, getDoc, 
         onSnapshot, updateDoc, increment, getDocs, query, orderBy, limit 
       } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+      // =========================================================================
+      // FIREBASE CONFIGURATION
+      // =========================================================================
+      const firebaseConfig = {
+        // REPLACE THESE WITH YOUR ACTUAL FIREBASE PROJECT KEYS
+        apiKey: "AIzaSyD7HZMkzjcHmIqV7m4r6a_2T8dfmGzVm54",
+        authDomain: "uniquiz-d3ddb.firebaseapp.com",
+        projectId: "uniquiz-d3ddb",
+        storageBucket: "uniquiz-d3ddb.firebasestorage.app",
+        messagingSenderId: "504888829506",
+        appId: "1:504888829506:web:4a569b26414e74113c6fdb"
+      };
+      // =========================================================================
 
       const MASTER_USER = { 
         id: 999, 
@@ -1029,14 +1202,9 @@
       let cachedReports = [];
       let savedWebhookUrl = "";
 
-      const firebaseConfig = {
-        apiKey: "AIzaSyD7HZMkzjcHmIqV7m4r6a_2T8dfmGzVm54",
-        authDomain: "uniquiz-d3ddb.firebaseapp.com",
-        projectId: "uniquiz-d3ddb",
-        storageBucket: "uniquiz-d3ddb.firebasestorage.app",
-      };
-
       let app, auth, db, appId = 'uniquiz-live';
+      let googleAccessToken = null;
+      let courseRoster = [];
       
       let currentGameId = null;
       let activeQuizData = null;
@@ -1055,10 +1223,13 @@
       let currentAnswers = { 0:0, 1:0, 2:0, 3:0 };
 
       let livePacingBins = [0, 0, 0, 0, 0, 0];
+      let renderThrottleTimer = null;
 
+      // Student Gameplay, Scoring & Multiplier States
       let playerStreak = 0;
       let playerScore = 0;
       let playerGold = 0;
+      let doublePointsActive = false;
       let hasAnswered = false;
       let selectedAnswerIndex = -1;
       let isAudioMuted = false;
@@ -1098,14 +1269,6 @@
           if (injectionRegex.test(payloadStr) || injectionRegex.test(context.name || '')) {
             score += 5.0;
             detections.push(`MALICIOUS_SYNTAX_PATTERN_IN_PAYLOAD`);
-          }
-
-          if (context.claimedPoints !== undefined) {
-            const theoreticalMax = 1000 + ((context.streak || 0) * 100);
-            if (context.claimedPoints > theoreticalMax) {
-              score += 4.5;
-              detections.push(`ARITHMETIC_TAMPERING (${context.claimedPoints} > ${theoreticalMax})`);
-            }
           }
 
           const finalLevel = Math.min(5, Math.floor(score));
@@ -1208,11 +1371,244 @@
         alert("AI successfully parsed text and populated question parameters!");
       };
 
+      // =========================================================================
+      // GOOGLE CLASSROOM OAUTH & ROLE-BASED ACCESS
+      // =========================================================================
+      window.loginWithGoogleClassroom = async () => {
+        if (!auth) return alert("Firebase is not initialized. Please verify your firebaseConfig object.");
+        
+        const provider = new GoogleAuthProvider();
+        provider.addScope('https://www.googleapis.com/auth/classroom.courses.readonly');
+        provider.addScope('https://www.googleapis.com/auth/classroom.rosters.readonly');
+
+        try {
+          const result = await signInWithPopup(auth, provider);
+          const credential = GoogleAuthProvider.credentialFromResult(result);
+          googleAccessToken = credential.accessToken;
+          const user = result.user;
+
+          console.log("Authenticated Google User:", user);
+          await resolveClassroomRole(googleAccessToken, user);
+        } catch (error) {
+          console.error("Google Classroom Sign-In Failed:", error);
+          alert("Authentication Failed: " + error.message);
+        }
+      };
+
+      async function resolveClassroomRole(token, user) {
+        try {
+          const teacherRes = await fetch("https://classroom.googleapis.com/v1/courses?teacherId=me", {
+            headers: { Authorization: `Bearer ${token}` }
+          });
+          const teacherData = await teacherRes.json();
+          const teachingCourses = teacherData.courses || [];
+
+          if (teachingCourses.length > 0) {
+            currentUser = {
+              name: user.displayName,
+              user: user.email,
+              role: 'professor',
+              courses: teachingCourses,
+              toggles: MASTER_USER.toggles
+            };
+
+            populateClassroomDropdown(teachingCourses);
+            loginSuccess(currentUser);
+          } else {
+            const studentRes = await fetch("https://classroom.googleapis.com/v1/courses?studentId=me", {
+              headers: { Authorization: `Bearer ${token}` }
+            });
+            const studentData = await studentRes.json();
+            const enrolledCourses = studentData.courses || [];
+
+            currentUser = {
+              name: user.displayName,
+              user: user.email,
+              role: 'student',
+              courses: enrolledCourses
+            };
+
+            showStudentPortal(currentUser);
+          }
+        } catch (err) {
+          console.warn("Classroom API call failed, falling back to instructor console:", err);
+          currentUser = {
+            name: user.displayName,
+            user: user.email,
+            role: 'professor',
+            toggles: MASTER_USER.toggles
+          };
+          loginSuccess(currentUser);
+        }
+      }
+
+      function populateClassroomDropdown(courses) {
+        const select = document.getElementById('classroom-course-select');
+        if (!select) return;
+        select.innerHTML = courses.map(c => `<option value="${c.id}">${c.name} (${c.section || 'General'})</option>`).join('');
+      }
+
+      function showStudentPortal(userRecord) {
+        document.getElementById('home-screen').classList.add('hidden');
+        document.getElementById('auth-screen').classList.add('hidden');
+        document.getElementById('app-layout').classList.add('hidden');
+        document.getElementById('student-portal-layout').classList.remove('hidden');
+
+        document.getElementById('student-portal-name').textContent = userRecord.name;
+        const container = document.getElementById('student-enrolled-courses');
+
+        if (!userRecord.courses || userRecord.courses.length === 0) {
+          container.innerHTML = `<div class="p-6 rounded-2xl glass-card text-center text-obsidian-400 font-mono text-xs col-span-full">No active Google Classroom enrollments found.</div>`;
+          return;
+        }
+
+        container.innerHTML = userRecord.courses.map(c => `
+          <div class="p-6 rounded-3xl glass-card flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] font-mono uppercase text-arcade-gold font-bold">${c.section || 'General'}</span>
+              <h4 class="text-base font-bold text-white mt-1">${c.name}</h4>
+              <p class="text-xs text-obsidian-400 font-mono mt-1">Course ID: ${c.id}</p>
+            </div>
+            <button onclick="toggleStudentJoin()" class="w-full py-2.5 bg-obsidian-800 hover:bg-obsidian-750 text-white font-mono text-xs rounded-xl transition">
+              Join Live Game PIN
+            </button>
+          </div>
+        `).join('');
+      }
+
+      window.syncSelectedClassroomRoster = async () => {
+        if (!googleAccessToken) {
+          return alert("Please sign in with Google to access your Google Classroom courses.");
+        }
+        const courseId = document.getElementById('classroom-course-select').value;
+        if (!courseId) return alert("Select an active Google Classroom course first.");
+
+        try {
+          const res = await fetch(`https://classroom.googleapis.com/v1/courses/${courseId}/students`, {
+            headers: { Authorization: `Bearer ${googleAccessToken}` }
+          });
+          const data = await res.json();
+          const students = data.students || [];
+
+          if (students.length === 0) {
+            return alert("No enrolled students found in this Google Classroom course.");
+          }
+
+          students.forEach((s, idx) => {
+            courseRoster.push({
+              name: s.profile?.name?.fullName || "Student",
+              email: s.profile?.emailAddress || "",
+              rollNumber: s.userId ? s.userId.slice(-6) : `GC-${idx + 1}`,
+              source: "Google Classroom"
+            });
+          });
+
+          renderCourseRosterTable();
+          alert(`Successfully synced ${students.length} students from Google Classroom!`);
+        } catch (err) {
+          console.error("Failed to sync classroom roster:", err);
+          alert("Google Classroom Sync Failed: Ensure API is enabled in your Google Cloud Project.");
+        }
+      };
+
+      window.handleRosterCSV = (event) => {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const text = e.target.result;
+          const lines = text.split(/\r?\n/).filter(line => line.trim() !== '');
+          if (lines.length < 2) return alert("CSV file appears to be empty.");
+
+          const header = lines[0].split(',').map(h => h.trim().toLowerCase());
+          const rollIdx = header.findIndex(h => h.includes('roll') || h.includes('id'));
+          const nameIdx = header.findIndex(h => h.includes('name'));
+          const emailIdx = header.findIndex(h => h.includes('email'));
+
+          let added = 0;
+          for (let i = 1; i < lines.length; i++) {
+            const cols = lines[i].split(',').map(c => c.trim().replace(/^"|"$/g, ''));
+            if (cols.length >= 2) {
+              courseRoster.push({
+                rollNumber: rollIdx !== -1 ? cols[rollIdx] : `R-${i}`,
+                name: nameIdx !== -1 ? cols[nameIdx] : cols[0],
+                email: emailIdx !== -1 ? cols[emailIdx] : '',
+                source: "CSV Upload"
+              });
+              added++;
+            }
+          }
+          renderCourseRosterTable();
+          alert(`Successfully imported ${added} students from CSV attendance sheet.`);
+        };
+        reader.readAsText(file);
+      };
+
+      window.addStudentManually = () => {
+        const name = document.getElementById('manual-student-name').value.trim();
+        const roll = document.getElementById('manual-student-roll').value.trim();
+        const email = document.getElementById('manual-student-email').value.trim();
+
+        if (!name || !roll) return alert("Student Name and Roll Number are required.");
+
+        courseRoster.push({
+          name,
+          rollNumber: roll,
+          email: email || `${roll.toLowerCase()}@university.edu`,
+          source: "Manual Entry"
+        });
+
+        document.getElementById('manual-student-name').value = '';
+        document.getElementById('manual-student-roll').value = '';
+        document.getElementById('manual-student-email').value = '';
+
+        renderCourseRosterTable();
+        alert(`Student ${name} (${roll}) added to roster.`);
+      };
+
+      function renderCourseRosterTable() {
+        const tbody = document.getElementById('roster-table-body');
+        const countLabel = document.getElementById('roster-count-label');
+        if (!tbody) return;
+
+        countLabel.textContent = `${courseRoster.length} Students Enrolled`;
+
+        if (courseRoster.length === 0) {
+          tbody.innerHTML = `<tr><td colspan="4" class="p-4 text-center text-obsidian-400 font-mono">No students enrolled yet.</td></tr>`;
+          return;
+        }
+
+        tbody.innerHTML = courseRoster.map(s => `
+          <tr>
+            <td class="p-4 font-mono font-bold text-arcade-gold">${s.rollNumber}</td>
+            <td class="p-4 font-medium text-white">${s.name}</td>
+            <td class="p-4 font-mono text-obsidian-400">${s.email || '—'}</td>
+            <td class="p-4 font-mono text-[10px] text-obsidian-300">
+              <span class="px-2 py-0.5 rounded bg-obsidian-800 border border-white/10">${s.source}</span>
+            </td>
+          </tr>
+        `).join('');
+      }
+
+      // =========================================================================
+      // SYSTEM INITIALIZATION & 125+ CONCURRENCY OPTIMIZATION
+      // =========================================================================
       async function initFirebase() {
+        if (!firebaseConfig.apiKey || firebaseConfig.apiKey === "YOUR_API_KEY") {
+          console.warn("Firebase not configured yet. Paste your actual config object into const firebaseConfig.");
+          return;
+        }
+
         app = initializeApp(firebaseConfig);
         auth = getAuth(app);
         db = getFirestore(app);
-        await signInAnonymously(auth);
+
+        onAuthStateChanged(auth, async (u) => {
+          if (!u) {
+            await signInAnonymously(auth);
+          }
+        });
 
         onSnapshot(collection(db, 'global_users'), (snap) => {
           cloudUsers = snap.docs.map(d => ({ id: d.id, ...d.data() }));
@@ -1234,344 +1630,6 @@
         }
       }
       initFirebase();
-
-      window.showComingSoon = (featureName) => {
-        document.getElementById('coming-soon-title').innerText = `${featureName} — Coming Soon`;
-        document.getElementById('coming-soon-modal').classList.remove('hidden');
-      };
-
-      window.openPricingModal = () => {
-        document.getElementById('pricing-modal').classList.remove('hidden');
-      };
-
-      window.testLTISync = () => {
-        const issuer = document.getElementById('lti-issuer').value.trim();
-        const lineitem = document.getElementById('lti-lineitem').value.trim();
-        if (!issuer || !lineitem) return alert("Please provide both LMS Issuer URL and Line Item API Endpoint.");
-        alert(`LTI 1.3 Handshake Success! Connected to issuer: ${issuer}\nAssigned Line Item ready for score synchronization.`);
-      };
-
-      window.saveWebhookConfig = () => {
-        savedWebhookUrl = document.getElementById('webhook-url-input').value.trim();
-        if (!savedWebhookUrl) return alert("Please enter a valid HTTPS webhook receiver URL.");
-        alert("Webhook target endpoint registered successfully for real-time telemetry dispatch.");
-      };
-
-      window.dispatchTestWebhook = async () => {
-        if (!savedWebhookUrl) return alert("Please save a webhook target URL first.");
-        try {
-          await fetch(savedWebhookUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              event: "UNIQUIZ_TEST_DISPATCH",
-              timestamp: new Date().toISOString(),
-              message: "UniQuiz Dispatcher operational. Secure connection verified."
-            })
-          }).catch(()=>{});
-          alert("Test webhook payload dispatched successfully.");
-        } catch (e) {
-          alert("Webhook transmission dispatched (Simulated CORS/Network Handshake).");
-        }
-      };
-
-      window.addCloudUser = async () => {
-        if (!db) return;
-        const name = document.getElementById('new-name').value.trim();
-        const user = document.getElementById('new-user').value.trim();
-        const pass = document.getElementById('new-pass').value.trim();
-        
-        const toggles = {
-          cohortMode: document.getElementById('tenant-toggle-cohort').checked,
-          soarFirewall: document.getElementById('tenant-toggle-soar').checked,
-          diagnostics: document.getElementById('tenant-toggle-diagnostics').checked,
-          pacingChart: document.getElementById('tenant-toggle-pacing').checked,
-          lmsGradebook: document.getElementById('tenant-toggle-lms').checked,
-          webhookDispatcher: document.getElementById('tenant-toggle-webhook').checked
-        };
-
-        if (name && user && pass) {
-          if (user === MASTER_USER.user || cloudUsers.some(u => u.user === user)) return alert("Identifier collision.");
-          await addDoc(collection(db, 'global_users'), { name, user, pass, role: 'admin', toggles, createdAt: Date.now() });
-          document.getElementById('new-name').value = '';
-          document.getElementById('new-user').value = '';
-          document.getElementById('new-pass').value = '';
-        }
-      };
-
-      window.renderUserList = () => {
-        const tbody = document.getElementById('user-list-body');
-        tbody.innerHTML = `<tr class="bg-obsidian-850"><td class="p-4 font-bold text-white">${MASTER_USER.name} (Global Super Admin)</td><td class="p-4"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/20 text-amber-300">All Features Unlocked</span></td><td class="p-4 text-obsidian-400">Protected</td></tr>`;
-        
-        cloudUsers.forEach(u => {
-          const t = u.toggles || { cohortMode: true, soarFirewall: true, diagnostics: true, pacingChart: true, lmsGradebook: true, webhookDispatcher: true };
-          const activeList = Object.entries(t).filter(([k, v]) => v).map(([k]) => k).join(', ');
-
-          const deleteBtn = `<button onclick="deleteCloudUser('${u.id}')" class="text-rose-400 hover:text-rose-300 font-bold">Revoke</button>`;
-          tbody.innerHTML += `<tr><td class="p-4 font-medium text-white">${u.name} <span class="text-obsidian-400 font-mono text-[10px]">(${u.user})</span></td><td class="p-4 font-mono text-obsidian-300 text-[11px]">${activeList}</td><td class="p-4">${deleteBtn}</td></tr>`;
-        });
-      };
-
-      window.deleteCloudUser = async (docId) => {
-        if (currentUser.user !== 'NEXORA') return alert("Only Super Admin can revoke university keys.");
-        if (confirm("Revoke university tenant credentials?")) await deleteDoc(doc(db, 'global_users', docId));
-      };
-
-      const playSFX = (id) => {
-        if (isAudioMuted) return;
-        const a = document.getElementById(id);
-        if (a) { a.currentTime = 0; a.play().catch(()=>{}); }
-      };
-
-      const playBGM = (id) => {
-        ['bgm-lobby', 'bgm-timer', 'bgm-podium'].forEach(bgm => {
-          const el = document.getElementById(bgm);
-          if (el) { el.pause(); el.currentTime = 0; }
-        });
-        if (id && !isAudioMuted) {
-          const target = document.getElementById(id);
-          if (target) target.play().catch(()=>{});
-        }
-      };
-
-      window.toggleAudioMute = () => {
-        isAudioMuted = !isAudioMuted;
-        document.getElementById('audio-toggle-btn').innerText = isAudioMuted ? '🔇' : '🔊';
-        if (isAudioMuted) {
-          ['bgm-lobby', 'bgm-timer', 'bgm-podium'].forEach(bgm => {
-            const el = document.getElementById(bgm);
-            if (el) el.pause();
-          });
-        }
-      };
-
-      window.toggleFullScreen = () => {
-        if (!document.fullscreenElement) {
-          document.documentElement.requestFullscreen().catch(()=>{});
-        } else {
-          document.exitFullscreen().catch(()=>{});
-        }
-      };
-
-      window.attemptLogin = () => {
-        const u = document.getElementById('login-user').value.trim();
-        const p = document.getElementById('login-pass').value.trim();
-        if (u === MASTER_USER.user && p === MASTER_USER.pass) return loginSuccess(MASTER_USER);
-        const found = cloudUsers.find(user => user.user === u && user.pass === p);
-        if (found) loginSuccess(found); else alert("Invalid Credentials");
-      };
-
-      function loginSuccess(user) {
-        currentUser = user;
-        document.getElementById('home-screen').classList.add('hidden');
-        document.getElementById('auth-screen').classList.add('hidden');
-        document.getElementById('app-layout').classList.remove('hidden');
-
-        document.getElementById('user-name-display').textContent = currentUser.name;
-        document.getElementById('user-role-display').textContent = currentUser.user === 'NEXORA' ? 'Platform Super Admin' : 'University Administrator (Free Tier)';
-
-        if (currentUser.user === 'NEXORA') {
-          document.getElementById('super-admin-controls').classList.remove('hidden');
-          document.getElementById('nav-users').parentElement.style.display = 'block';
-        } else {
-          document.getElementById('super-admin-controls').classList.add('hidden');
-          document.getElementById('nav-users').parentElement.style.display = 'none';
-        }
-
-        const toggles = currentUser.toggles || MASTER_USER.toggles;
-        const teamGroup = document.getElementById('team-select-group');
-        if (teamGroup) teamGroup.classList.toggle('hidden', !toggles.cohortMode);
-
-        const settingsNav = document.getElementById('nav-settings');
-        if (settingsNav) {
-          settingsNav.parentElement.style.display = (toggles.lmsGradebook || toggles.webhookDispatcher) ? 'block' : 'none';
-        }
-
-        window.renderUserList();
-        window.loadQuizzesFromDB();
-        window.nav('library');
-      }
-
-      window.logout = () => window.location.reload();
-      window.toggleStudentJoin = () => {
-        document.getElementById('auth-screen').classList.add('hidden');
-        document.getElementById('home-screen').classList.add('hidden');
-        document.getElementById('student-join-screen').classList.toggle('hidden');
-      };
-
-      window.openAuthModal = () => {
-        document.getElementById('auth-screen').classList.remove('hidden');
-      };
-      window.closeAuthModal = () => {
-        document.getElementById('auth-screen').classList.add('hidden');
-      };
-
-      window.nav = (view) => {
-        document.querySelectorAll('.sidebar-item').forEach(el => {
-          el.classList.remove('bg-obsidian-800', 'text-white');
-          el.classList.add('text-obsidian-400');
-        });
-        const activeNav = document.getElementById(`nav-${view}`);
-        if (activeNav) activeNav.classList.add('bg-obsidian-800', 'text-white');
-        ['view-library', 'view-reports', 'view-users', 'view-settings'].forEach(id => {
-          const el = document.getElementById(id);
-          if (el) el.classList.add('hidden');
-        });
-        const targetView = document.getElementById(`view-${view}`);
-        if (targetView) targetView.classList.remove('hidden');
-      };
-
-      window.openCreator = () => {
-        editingQuizDocId = null;
-        draftQuestions = [];
-        document.getElementById('modal-module-heading').innerText = "Create Question Module";
-        document.getElementById('btn-save-module').innerText = "COMMIT TO REPOSITORY";
-        document.getElementById('new-set-title').value = "";
-        window.renderQueuedQuestionsList();
-        document.getElementById('create-modal').classList.remove('hidden');
-        window.updateCreatorLivePreview();
-      };
-
-      window.openEditorForQuiz = async (quizDocId) => {
-        editingQuizDocId = quizDocId;
-        const snap = await getDoc(doc(db, 'global_quizzes', quizDocId));
-        if (!snap.exists()) return alert("Quiz not found.");
-
-        const data = snap.data();
-        document.getElementById('modal-module-heading').innerText = "Edit Question Module";
-        document.getElementById('btn-save-module').innerText = "UPDATE MODULE IN REPOSITORY";
-        document.getElementById('new-set-title').value = data.title || "";
-        draftQuestions = [...(data.questions || [])];
-
-        window.renderQueuedQuestionsList();
-        document.getElementById('create-modal').classList.remove('hidden');
-        window.updateCreatorLivePreview();
-      };
-
-      window.toggleQuestionType = () => {
-        const val = document.getElementById('q-type').value;
-        const toggle = val === "2";
-        document.getElementById('opt-2').classList.toggle('hidden', toggle);
-        document.getElementById('opt-3').classList.toggle('hidden', toggle);
-        document.getElementById('sel-opt-2').classList.toggle('hidden', toggle);
-        document.getElementById('sel-opt-3').classList.toggle('hidden', toggle);
-      };
-
-      window.addQuestionToDraft = () => {
-        const type = parseInt(document.getElementById('q-type').value);
-        const timeLimit = parseInt(document.getElementById('q-timer').value) || 30;
-        const prompt = document.getElementById('q-prompt').value.trim();
-        const img = document.getElementById('q-image').value.trim();
-        let opts = type === 4
-          ? [document.getElementById('opt-0').value, document.getElementById('opt-1').value, document.getElementById('opt-2').value, document.getElementById('opt-3').value]
-          : [document.getElementById('opt-0').value, document.getElementById('opt-1').value];
-        const correct = parseInt(document.getElementById('correct-opt').value);
-
-        if (!prompt || opts.includes("")) return alert("Please populate all inputs.");
-        draftQuestions.push({ question: prompt, image: img, options: opts, correct, type, timeLimit });
-        
-        document.getElementById('q-prompt').value = "";
-        document.getElementById('q-image').value = "";
-        for (let i = 0; i < 4; i++) {
-          const el = document.getElementById(`opt-${i}`);
-          if (el) el.value = "";
-        }
-        window.renderQueuedQuestionsList();
-        window.updateCreatorLivePreview();
-      };
-
-      window.renderQueuedQuestionsList = () => {
-        document.getElementById('draft-count').innerText = `${draftQuestions.length} Questions Queued`;
-        const listEl = document.getElementById('queued-questions-list');
-        listEl.innerHTML = '';
-
-        draftQuestions.forEach((q, idx) => {
-          listEl.innerHTML += `
-            <div class="p-2.5 rounded-xl bg-obsidian-850 border border-white/10 flex items-center justify-between gap-3 text-xs">
-              <div class="flex items-center gap-2 truncate flex-1">
-                <span class="font-mono text-obsidian-400 font-bold">#${idx + 1}</span>
-                <span class="truncate font-medium text-white">${q.question.replace(/```[\s\S]*?```/g, '[Code]').replace(/\$+/g, '')}</span>
-                <span class="font-mono text-[10px] text-obsidian-400">(${q.timeLimit}s)</span>
-              </div>
-              <div class="flex items-center gap-1 font-mono">
-                <button type="button" onclick="moveQuestion(${idx}, -1)" ${idx === 0 ? 'disabled class="opacity-20"' : 'class="hover:text-white text-obsidian-400"'} title="Move Up">▲</button>
-                <button type="button" onclick="moveQuestion(${idx}, 1)" ${idx === draftQuestions.length - 1 ? 'disabled class="opacity-20"' : 'class="hover:text-white text-obsidian-400"'} title="Move Down">▼</button>
-                <button type="button" onclick="removeQuestionFromDraft(${idx})" class="text-rose-400 hover:text-rose-300 ml-1.5" title="Remove">✕</button>
-              </div>
-            </div>
-          `;
-        });
-      };
-
-      window.moveQuestion = (idx, delta) => {
-        const newIdx = idx + delta;
-        if (newIdx < 0 || newIdx >= draftQuestions.length) return;
-        const temp = draftQuestions[idx];
-        draftQuestions[idx] = draftQuestions[newIdx];
-        draftQuestions[newIdx] = temp;
-        window.renderQueuedQuestionsList();
-      };
-
-      window.removeQuestionFromDraft = (idx) => {
-        draftQuestions.splice(idx, 1);
-        window.renderQueuedQuestionsList();
-      };
-
-      window.saveNewSet = async () => {
-        const title = document.getElementById('new-set-title').value.trim();
-        if (!title || draftQuestions.length === 0) return alert("Title and questions required.");
-
-        if (editingQuizDocId) {
-          await updateDoc(doc(db, 'global_quizzes', editingQuizDocId), {
-            title, questions: draftQuestions, updatedAt: Date.now()
-          });
-        } else {
-          await addDoc(collection(db, 'global_quizzes'), {
-            title, author: currentUser.name, authorUsername: currentUser.user, questions: draftQuestions
-          });
-        }
-        document.getElementById('create-modal').classList.add('hidden');
-      };
-
-      window.loadQuizzesFromDB = () => {
-        if (!db || !currentUser) return;
-        onSnapshot(collection(db, 'global_quizzes'), (snap) => {
-          const grid = document.getElementById('quiz-grid');
-          grid.innerHTML = '';
-          const myQuizzes = snap.docs.filter(d => currentUser.user === 'NEXORA' || d.data().authorUsername === currentUser.user);
-
-          if (myQuizzes.length === 0) {
-            grid.innerHTML = `<div class="col-span-full py-12 text-center text-obsidian-400 text-xs font-mono">No modules created yet.</div>`;
-            return;
-          }
-
-          myQuizzes.forEach(docSnap => {
-            const q = docSnap.data();
-            const del = (q.authorUsername === currentUser.user || currentUser.user === 'NEXORA')
-              ? `<button onclick="deleteDoc(doc(db, 'global_quizzes', '${docSnap.id}'))" class="absolute top-4 right-4 text-obsidian-400 hover:text-rose-400 text-xs">✕</button>`
-              : '';
-
-            grid.innerHTML += `
-              <div class="rounded-3xl glass-card p-6 flex flex-col justify-between relative hover:border-white/20 transition shadow-lg">
-                ${del}
-                <div>
-                  <span class="text-[10px] font-mono uppercase text-obsidian-400 mb-2 block font-semibold">${q.questions.length} Items Indexed</span>
-                  <h3 class="font-bold text-white text-base leading-snug mb-1">${q.title}</h3>
-                  <span class="text-xs text-obsidian-400">Author: ${q.author}</span>
-                </div>
-                <div class="mt-6 flex gap-2">
-                  <button onclick="openEditorForQuiz('${docSnap.id}')" class="px-4 py-2.5 bg-obsidian-800 hover:bg-obsidian-750 text-white font-mono text-xs rounded-xl transition">
-                    Edit
-                  </button>
-                  <button onclick="initiateHostSession('${docSnap.id}')" class="flex-1 py-2.5 bg-white text-obsidian-950 font-bold text-xs uppercase tracking-wider rounded-xl arcade-key shadow-[0_3px_0_#94A3B8]">
-                    LAUNCH BROADCAST
-                  </button>
-                </div>
-              </div>
-            `;
-          });
-        });
-      };
 
       let cachedActivePlayers = [];
 
@@ -1607,12 +1665,14 @@
           window.initSecurityRadarListener(currentGameId);
         }
 
+        // Optimized Snapshot Listener for 125+ players
         onSnapshot(collection(db, 'artifacts', appId, 'public', 'data', 'games', currentGameId, 'players'), (snap) => {
           livePlayerCount = snap.docs.length;
           cachedActivePlayers = snap.docs.map(d => ({ uid: d.id, ...d.data() }));
           document.getElementById('lobby-count').textContent = livePlayerCount;
           document.getElementById('host-total-players').textContent = livePlayerCount;
-          document.getElementById('lobby-player-grid').innerHTML = '';
+
+          scheduleThrottledLobbyRender();
 
           liveAnswersCount = 0;
           currentAnswers = { 0:0, 1:0, 2:0, 3:0 };
@@ -1620,27 +1680,21 @@
           let aggregatedGold = 0;
           livePacingBins = [0, 0, 0, 0, 0, 0];
 
+          const squadScores = {
+            'Alpha Matrix': 0,
+            'Blue Cyber': 0,
+            'Sigma Neural': 0,
+            'Quantum Guild': 0
+          };
+
           cachedActivePlayers.forEach(p => {
             const threatLevel = p.threatLevel || 0;
             if (threatLevel >= 2) elevatedThreatCount++;
             aggregatedGold += (p.gold || 0);
 
-            const badgeBg = threatLevel === 0 ? 'bg-emerald-950/60 text-emerald-300 border-emerald-800'
-                          : threatLevel === 1 ? 'bg-blue-950/60 text-blue-300 border-blue-800'
-                          : threatLevel === 2 ? 'bg-amber-950/60 text-amber-300 border-amber-800'
-                          : threatLevel === 3 ? 'bg-orange-950/60 text-orange-300 border-orange-800'
-                          : 'bg-rose-950/80 text-rose-300 border-rose-800 animate-pulse';
-
-            if (!document.getElementById('host-lobby-screen').classList.contains('hidden')) {
-              document.getElementById('lobby-player-grid').innerHTML += `
-                <div onclick="inspectPlayerThreat('${p.uid}')" class="cursor-pointer px-4 py-2.5 rounded-2xl glass-card flex items-center gap-2.5 hover:border-white/30 transition shadow-md">
-                  <span class="text-sm font-mono">${p.avatar}</span>
-                  <span class="text-xs font-bold text-white">${p.name}</span>
-                  <span class="text-[10px] font-mono text-arcade-gold">🪙 ${p.gold || 0}</span>
-                  ${activeToggles.cohortMode ? `<span class="text-[10px] font-mono text-obsidian-400">(${p.team || 'Solo'})</span>` : ''}
-                  ${activeToggles.soarFirewall ? `<span class="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded border ${badgeBg}">L${threatLevel}</span>` : ''}
-                </div>
-              `;
+            const pTeam = p.team || 'Alpha Matrix';
+            if (squadScores[pTeam] !== undefined) {
+              squadScores[pTeam] += (p.score || 0);
             }
 
             if (p.currentAnswer !== undefined && p.currentAnswer !== -1) {
@@ -1653,6 +1707,11 @@
               livePacingBins[binIndex]++;
             }
           });
+
+          document.getElementById('score-team-alpha').textContent = `${squadScores['Alpha Matrix']} pts`;
+          document.getElementById('score-team-cyber').textContent = `${squadScores['Blue Cyber']} pts`;
+          document.getElementById('score-team-sigma').textContent = `${squadScores['Sigma Neural']} pts`;
+          document.getElementById('score-team-guild').textContent = `${squadScores['Quantum Guild']} pts`;
 
           document.getElementById('host-total-gold-pool').textContent = aggregatedGold;
           document.getElementById('host-answer-count').textContent = liveAnswersCount;
@@ -1674,6 +1733,50 @@
           }
         });
       };
+
+      // Throttled DOM rendering to prevent browser lockup with 125+ players
+      function scheduleThrottledLobbyRender() {
+        if (renderThrottleTimer) return;
+        renderThrottleTimer = setTimeout(() => {
+          renderHostLobbyGrid();
+          renderThrottleTimer = null;
+        }, 200);
+      }
+
+      function renderHostLobbyGrid() {
+        const grid = document.getElementById('lobby-player-grid');
+        if (!grid || document.getElementById('host-lobby-screen').classList.contains('hidden')) return;
+
+        const fragment = document.createDocumentFragment();
+        const activeToggles = currentUser?.toggles || MASTER_USER.toggles;
+
+        cachedActivePlayers.forEach(p => {
+          const threatLevel = p.threatLevel || 0;
+          const badgeBg = threatLevel === 0 ? 'bg-emerald-950/60 text-emerald-300 border-emerald-800'
+                        : threatLevel === 1 ? 'bg-blue-950/60 text-blue-300 border-blue-800'
+                        : threatLevel === 2 ? 'bg-amber-950/60 text-amber-300 border-amber-800'
+                        : threatLevel === 3 ? 'bg-orange-950/60 text-orange-300 border-orange-800'
+                        : 'bg-rose-950/80 text-rose-300 border-rose-800 animate-pulse';
+
+          const card = document.createElement('div');
+          card.className = "cursor-pointer px-3.5 py-2 rounded-2xl glass-card flex items-center gap-2 hover:border-white/30 transition shadow-sm text-xs";
+          card.onclick = () => window.inspectPlayerThreat(p.uid);
+          card.innerHTML = `
+            <span class="font-mono text-sm">${p.avatar}</span>
+            <div class="flex flex-col text-left">
+              <span class="font-bold text-white truncate max-w-[110px]">${p.name}</span>
+              ${p.rollNumber ? `<span class="text-[9px] font-mono text-obsidian-400">${p.rollNumber}</span>` : ''}
+            </div>
+            <span class="text-[10px] font-mono text-arcade-gold ml-1">🪙${p.gold || 0}</span>
+            ${activeToggles.cohortMode ? `<span class="text-[9px] font-mono text-obsidian-400">(${p.team ? p.team.split(' ')[0] : 'Solo'})</span>` : ''}
+            ${activeToggles.soarFirewall ? `<span class="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded border ${badgeBg}">L${threatLevel}</span>` : ''}
+          `;
+          fragment.appendChild(card);
+        });
+
+        grid.innerHTML = '';
+        grid.appendChild(fragment);
+      }
 
       window.renderHostPacingHistogram = () => {
         const container = document.getElementById('pacing-bars-container');
@@ -1808,6 +1911,7 @@
         hostPushQuestionState();
       };
 
+      // Push active question payload to room document for live student rendering
       function hostPushQuestionState() {
         const q = activeQuizData[currentQIndex];
         hostTotalDuration = q.timeLimit || 30;
@@ -1820,7 +1924,13 @@
           status: 'question', 
           qIndex: currentQIndex,
           openedAt: questionOpenedTimestamp,
-          duration: hostTotalDuration
+          duration: hostTotalDuration,
+          currentQuestion: {
+            prompt: q.question,
+            options: q.options || [],
+            type: q.type || 4,
+            image: q.image || ''
+          }
         });
 
         playBGM('bgm-timer');
@@ -1952,26 +2062,26 @@
         document.getElementById('host-podium-screen').classList.remove('hidden');
         playBGM('bgm-podium');
 
-        const q = query(collection(db, 'artifacts', appId, 'public', 'data', 'games', currentGameId, 'players'), orderBy("gold", "desc"));
+        const q = query(collection(db, 'artifacts', appId, 'public', 'data', 'games', currentGameId, 'players'), orderBy("score", "desc"));
         const querySnapshot = await getDocs(q);
         const rankedPlayers = querySnapshot.docs.map(d => d.data());
 
         if (rankedPlayers[0]) {
           document.getElementById('podium-av-1').innerText = rankedPlayers[0].avatar;
           document.getElementById('podium-name-1').innerText = rankedPlayers[0].name;
-          document.getElementById('podium-score-1').innerText = rankedPlayers[0].gold || 0;
+          document.getElementById('podium-score-1').innerText = rankedPlayers[0].score || 0;
           setTimeout(() => document.getElementById('block-1').style.height = '100%', 300);
         }
         if (rankedPlayers[1]) {
           document.getElementById('podium-av-2').innerText = rankedPlayers[1].avatar;
           document.getElementById('podium-name-2').innerText = rankedPlayers[1].name;
-          document.getElementById('podium-score-2').innerText = rankedPlayers[1].gold || 0;
+          document.getElementById('podium-score-2').innerText = rankedPlayers[1].score || 0;
           setTimeout(() => document.getElementById('block-2').style.height = '70%', 900);
         }
         if (rankedPlayers[2]) {
           document.getElementById('podium-av-3').innerText = rankedPlayers[2].avatar;
           document.getElementById('podium-name-3').innerText = rankedPlayers[2].name;
-          document.getElementById('podium-score-3').innerText = rankedPlayers[2].gold || 0;
+          document.getElementById('podium-score-3').innerText = rankedPlayers[2].score || 0;
           setTimeout(() => document.getElementById('block-3').style.height = '48%', 1500);
         }
 
@@ -1988,7 +2098,7 @@
             createdAt: Date.now(),
             participantCount: rankedPlayers.length,
             averageAccuracy: meanAccuracy,
-            topScore: rankedPlayers[0]?.gold || 0,
+            topScore: rankedPlayers[0]?.score || 0,
             championName: rankedPlayers[0]?.name || "None",
             questions: sessionQuestionHistory,
             roster: rankedPlayers
@@ -2004,6 +2114,7 @@
                 pin: currentGameId,
                 title: activeQuizTitle,
                 champion: rankedPlayers[0]?.name || "None",
+                score: rankedPlayers[0]?.score || 0,
                 gold: rankedPlayers[0]?.gold || 0
               })
             }).catch(()=>{});
@@ -2033,6 +2144,7 @@
 
       window.joinGame = async () => {
         const name = document.getElementById('player-name-input').value.trim();
+        const rollNumber = document.getElementById('player-roll-input').value.trim();
         currentGameId = document.getElementById('game-pin-input').value.trim();
         const activeToggles = currentUser?.toggles || MASTER_USER.toggles;
         myAssignedTeam = activeToggles.cohortMode ? document.getElementById('player-team-input').value : "Solo";
@@ -2040,7 +2152,7 @@
 
         const securityEval = StockfishSecurityEngine.evaluateMove({
           name: name,
-          rawPayload: { name, avatar: selectedAvatar, team: myAssignedTeam }
+          rawPayload: { name, rollNumber, avatar: selectedAvatar, team: myAssignedTeam }
         });
 
         if (securityEval.threatLevel >= 5) {
@@ -2050,12 +2162,17 @@
         const gameSnap = await getDoc(doc(db, 'artifacts', appId, 'public', 'data', 'games', currentGameId));
         if (!gameSnap.exists()) return alert("Invalid PIN Identifier.");
 
-        activeQuizData = gameSnap.data().questions;
+        activeQuizData = gameSnap.data().questions || [];
         myThreatScore = securityEval.threatLevel;
         myThreatLogs = [securityEval];
 
+        playerScore = 0;
+        playerGold = 0;
+        playerStreak = 0;
+
         await setDoc(doc(db, 'artifacts', appId, 'public', 'data', 'games', currentGameId, 'players', auth.currentUser.uid), {
           name, 
+          rollNumber: rollNumber || "N/A",
           avatar: selectedAvatar, 
           team: myAssignedTeam,
           score: 0, 
@@ -2070,12 +2187,18 @@
         document.getElementById('waiting-avatar-display').textContent = selectedAvatar;
         document.getElementById('player-wait-pin').textContent = "ROOM: " + currentGameId;
 
+        // Student listener catching active question payload
         onSnapshot(doc(db, 'artifacts', appId, 'public', 'data', 'games', currentGameId), (d) => {
           const gameData = d.data();
+          if (!gameData) return;
           const state = gameData.status;
           const newQIndex = gameData.qIndex;
 
           if (state === 'question') {
+            if (gameData.currentQuestion) {
+              window.studentCurrentQ = gameData.currentQuestion;
+            }
+
             if (newQIndex !== currentQIndex) {
               hasAnswered = false;
               selectedAnswerIndex = -1;
@@ -2104,6 +2227,7 @@
         });
       };
 
+      // Populate prompt and real option content directly onto buttons
       function studentShowButtons() {
         document.getElementById('player-waiting-screen').classList.add('hidden');
         document.getElementById('game-screen').classList.remove('hidden');
@@ -2115,15 +2239,26 @@
           document.getElementById('wait-message-submitted').classList.add('hidden');
           document.getElementById('answer-buttons-container').classList.remove('hidden');
 
-          const q = activeQuizData[currentQIndex];
+          const q = window.studentCurrentQ || (activeQuizData ? activeQuizData[currentQIndex] : null);
+          if (!q) return;
+
+          // Render prompt on student display
+          const promptEl = document.getElementById('student-live-prompt');
+          if (promptEl && q.prompt) {
+            window.renderSTEMToElement(promptEl, q.prompt);
+          }
+
           const isBinary = q.type === 2;
           document.getElementById('btn-2').classList.toggle('hidden', isBinary);
           document.getElementById('btn-3').classList.toggle('hidden', isBinary);
 
+          // Populate real options into the 4 arcade buttons
           for (let i = 0; i < (isBinary ? 2 : 4); i++) {
             const btnTextEl = document.getElementById(`btn-${i}-text`);
-            const optVal = q.options && q.options[i] ? q.options[i] : `Option ${i+1}`;
-            window.renderSTEMToElement(btnTextEl, optVal);
+            if (btnTextEl) {
+              const optionContent = (q.options && q.options[i]) ? q.options[i] : `Option ${i + 1}`;
+              window.renderSTEMToElement(btnTextEl, optionContent);
+            }
           }
         }
       }
@@ -2139,8 +2274,8 @@
 
         document.getElementById('answer-buttons-container').classList.add('hidden');
         
-        const q = activeQuizData[currentQIndex];
-        if (idx === q.correct) {
+        const q = activeQuizData ? activeQuizData[currentQIndex] : null;
+        if (q && idx === q.correct) {
           document.getElementById('chest-selection-screen').classList.remove('hidden');
         } else {
           document.getElementById('wait-message-submitted').classList.remove('hidden');
@@ -2186,11 +2321,12 @@
         });
       };
 
-      window.pickChest = (chestIdx) => {
+      // Blooket Loot & Mystery Chest Logic
+      window.pickChest = async (chestIdx) => {
         playSFX('sfx-chest');
         const chestLoot = [
           { type: 'FLAT', amount: 150, desc: '+150 Flat Gold Bonus' },
-          { type: 'MULTIPLIER', mult: 1.5, desc: '1.5x Gold Multiplier' },
+          { type: 'DOUBLE_POINTS', amount: 100, desc: '2x Next Question Points!' },
           { type: 'JACKPOT', amount: 300, desc: 'JACKPOT! +300 Gold' },
           { type: 'SWAP', amount: 75, desc: 'Sneak Steal! +75 Gold' }
         ];
@@ -2201,9 +2337,11 @@
         if (selectedLoot.type === 'FLAT' || selectedLoot.type === 'JACKPOT' || selectedLoot.type === 'SWAP') {
           earnedGold = selectedLoot.amount;
           playerGold += earnedGold;
-        } else if (selectedLoot.type === 'MULTIPLIER') {
-          earnedGold = Math.round(playerGold * 0.5) + 50;
+        } else if (selectedLoot.type === 'DOUBLE_POINTS') {
+          earnedGold = selectedLoot.amount;
           playerGold += earnedGold;
+          doublePointsActive = true;
+          document.getElementById('active-multiplier-badge').classList.remove('hidden');
         }
 
         document.getElementById('player-gold').innerText = playerGold;
@@ -2212,12 +2350,13 @@
         document.getElementById('chest-selection-screen').classList.add('hidden');
         document.getElementById('wait-message-submitted').classList.remove('hidden');
 
-        updateDoc(doc(db, 'artifacts', appId, 'public', 'data', 'games', currentGameId, 'players', auth.currentUser.uid), {
+        await updateDoc(doc(db, 'artifacts', appId, 'public', 'data', 'games', currentGameId, 'players', auth.currentUser.uid), {
           gold: playerGold
         });
       };
 
-      function studentShowResult() {
+      // Calculation and Point Commit Engine
+      async function studentShowResult() {
         document.getElementById('wait-message-submitted').classList.add('hidden');
         document.getElementById('wait-message-start').classList.add('hidden');
         document.getElementById('answer-buttons-container').classList.add('hidden');
@@ -2225,45 +2364,53 @@
 
         const resultBox = document.getElementById('result-message');
         resultBox.classList.remove('hidden');
-        const q = activeQuizData[currentQIndex];
+        const q = activeQuizData ? activeQuizData[currentQIndex] : null;
 
         const activeToggles = currentUser?.toggles || MASTER_USER.toggles;
         if (activeToggles.soarFirewall && myThreatScore === 3) {
           playSFX('sfx-wrong');
           playerStreak = 0;
           document.getElementById('result-title').innerText = "NULLIFIED";
-          document.getElementById('result-title').className = "text-5xl font-bold mb-3 font-mono text-stockfish-3";
-          document.getElementById('result-points').innerText = 0;
-          document.getElementById('result-breakdown').innerText = `⚠️ Stockfish Security Alert: Threat Level 3/5 (Points Nullified)`;
+          document.getElementById('result-title').className = "text-5xl font-bold mb-3 font-mono text-rose-500";
+          document.getElementById('result-points').innerText = "0";
+          document.getElementById('result-breakdown').innerText = `⚠️ Threat Level 3/5 Detected: Points Nullified`;
           
-          updateDoc(doc(db, 'artifacts', appId, 'public', 'data', 'games', currentGameId, 'players', auth.currentUser.uid), {
+          await updateDoc(doc(db, 'artifacts', appId, 'public', 'data', 'games', currentGameId, 'players', auth.currentUser.uid), {
             score: playerScore, currentAnswer: -1
           });
           return;
         }
 
-        if (selectedAnswerIndex === q.correct) {
+        if (q && selectedAnswerIndex === q.correct) {
           playSFX('sfx-correct');
           playerStreak++;
 
           const responseDuration = Math.max(0.1, (Date.now() - questionOpenedTimestamp) / 1000);
           const limitSeconds = hostTotalDuration || 30;
+          
           const baseSpeedScore = Math.max(500, Math.round((1 - (responseDuration / (limitSeconds * 2))) * 1000));
-          const streakBonus = playerStreak * 100;
-          const totalPointsEarned = baseSpeedScore + streakBonus;
+          const streakBonus = (playerStreak - 1) * 100;
+          
+          let totalEarnedThisRound = baseSpeedScore + streakBonus;
 
-          playerScore += totalPointsEarned;
+          if (doublePointsActive) {
+            totalEarnedThisRound *= 2;
+            doublePointsActive = false;
+            document.getElementById('active-multiplier-badge').classList.add('hidden');
+          }
+
+          playerScore += totalEarnedThisRound;
 
           document.getElementById('result-title').innerText = "VERIFIED";
           document.getElementById('result-title').className = "text-5xl font-bold mb-3 font-mono text-arcade-green";
-          document.getElementById('result-points').innerText = totalPointsEarned;
-          document.getElementById('result-breakdown').innerText = `⚡ Speed Factor: +${baseSpeedScore} pts • 🔥 Streak Bonus: +${streakBonus}`;
+          document.getElementById('result-points').innerText = totalEarnedThisRound;
+          document.getElementById('result-breakdown').innerText = `⚡ Speed Factor: +${baseSpeedScore} pts • 🔥 Streak Bonus: +${streakBonus} pts`;
         } else {
           playSFX('sfx-wrong');
           playerStreak = 0;
           document.getElementById('result-title').innerText = selectedAnswerIndex === -1 ? "EXPIRATION" : "FAULT";
           document.getElementById('result-title').className = "text-5xl font-bold mb-3 font-mono text-arcade-red";
-          document.getElementById('result-points').innerText = 0;
+          document.getElementById('result-points').innerText = "0";
           document.getElementById('result-chest-reward').innerText = `+0 Gold`;
           document.getElementById('result-breakdown').innerText = `Streak Reset to 0 • Accuracy Fault`;
         }
@@ -2278,16 +2425,20 @@
         document.getElementById('player-score').innerText = playerScore;
         document.getElementById('player-streak').innerText = playerStreak;
 
-        updateDoc(doc(db, 'artifacts', appId, 'public', 'data', 'games', currentGameId, 'players', auth.currentUser.uid), {
-          score: playerScore, gold: playerGold, currentAnswer: -1
+        await updateDoc(doc(db, 'artifacts', appId, 'public', 'data', 'games', currentGameId, 'players', auth.currentUser.uid), {
+          score: playerScore, 
+          gold: playerGold, 
+          streak: playerStreak,
+          currentAnswer: -1
         });
       }
 
       function studentShowPodium() {
         document.getElementById('game-screen').classList.add('hidden');
         document.getElementById('student-final-screen').classList.remove('hidden');
+        document.getElementById('final-score-display').innerText = playerScore;
         document.getElementById('final-gold-display').innerText = playerGold;
-        if (playerGold > 0) confetti({ particleCount: 160, spread: 70, origin: { y: 0.6 } });
+        if (playerScore > 0) confetti({ particleCount: 160, spread: 70, origin: { y: 0.6 } });
       }
 
       window.renderReportsTable = () => {
@@ -2322,7 +2473,7 @@
                 <div class="flex items-center gap-4 mt-2 text-xs font-mono text-obsidian-400">
                   <span>Class: <strong class="text-white">${rep.participantCount || 0}</strong> students</span>
                   <span>Accuracy: <strong class="text-white">${rep.averageAccuracy || 0}%</strong></span>
-                  <span>Winner: <strong class="text-arcade-gold font-bold">${rep.championName || 'N/A'}</strong> (🪙 ${rep.topScore || 0} Gold)</span>
+                  <span>Winner: <strong class="text-arcade-gold font-bold">${rep.championName || 'N/A'}</strong> (${rep.topScore || 0} pts)</span>
                 </div>
               </div>
 
@@ -2391,9 +2542,9 @@
         const rep = cachedReports.find(r => r.id === repId);
         if (!rep || !rep.roster) return alert("Roster data unavailable.");
 
-        let csv = "Rank,Callsign,Avatar,TeamCohort,Gold,Score,PeakThreatLevel,Module,SessionPIN,Date\n";
+        let csv = "Rank,Callsign,RollNumber,Avatar,TeamCohort,Gold,Score,PeakThreatLevel,Module,SessionPIN,Date\n";
         rep.roster.forEach((p, idx) => {
-          csv += `${idx + 1},"${p.name.replace(/"/g, '""')}","${p.avatar}","${p.team || 'Solo'}",${p.gold || 0},${p.score},${p.threatLevel || 0},"${rep.quizTitle.replace(/"/g, '""')}",${rep.gameId},"${new Date(rep.createdAt).toISOString()}"\n`;
+          csv += `${idx + 1},"${p.name.replace(/"/g, '""')}","${p.rollNumber || 'N/A'}","${p.avatar}","${p.team || 'Solo'}",${p.gold || 0},${p.score || 0},${p.threatLevel || 0},"${rep.quizTitle.replace(/"/g, '""')}",${rep.gameId},"${new Date(rep.createdAt).toISOString()}"\n`;
         });
 
         triggerCSVDownload(csv, `UniQuiz_${rep.gameId}_Telemetry.csv`);
@@ -2402,11 +2553,11 @@
       window.exportAllReportsCSV = () => {
         if (cachedReports.length === 0) return alert("No telemetry available to export.");
 
-        let csv = "SessionPIN,Module,Date,Participants,AverageAccuracy,Rank,Participant,TeamCohort,Gold,Score,ThreatLevel\n";
+        let csv = "SessionPIN,Module,Date,Participants,AverageAccuracy,Rank,Participant,RollNumber,TeamCohort,Gold,Score,ThreatLevel\n";
         cachedReports.forEach(rep => {
           const dateStr = new Date(rep.createdAt).toISOString();
           (rep.roster || []).forEach((p, idx) => {
-            csv += `${rep.gameId},"${rep.quizTitle.replace(/"/g, '""')}","${dateStr}",${rep.participantCount || 0},${rep.averageAccuracy || 0}%,${idx + 1},"${p.name.replace(/"/g, '""')}","${p.team || 'Solo'}",${p.gold || 0},${p.score},${p.threatLevel || 0}\n`;
+            csv += `${rep.gameId},"${rep.quizTitle.replace(/"/g, '""')}","${dateStr}",${rep.participantCount || 0},${rep.averageAccuracy || 0}%,${idx + 1},"${p.name.replace(/"/g, '""')}","${p.rollNumber || 'N/A'}","${p.team || 'Solo'}",${p.gold || 0},${p.score || 0},${p.threatLevel || 0}\n`;
           });
         });
 
